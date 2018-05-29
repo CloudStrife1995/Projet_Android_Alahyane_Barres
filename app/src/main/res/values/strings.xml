@@ -1,5 +1,12 @@
 <resources>
     <string name="app_name">YouViewer</string>
     <string name="button_text">Button1</string>
-    <string name="msg" />
+    <string name="msg"/>
+    <string name="Do_you_want_to_change_the_settings">Do you want to change the settings ?</string>
+    <string name="Do_you_need_help">Do you need help ?</string>
+    <string name="Help">Help</string>
+    <string name="Settings">Settings</string>
+    <string name="liste_des_films">Movies list</string>
+    <string name="welcome_to_youviewer">WELCOME TO YOUVIEWER</string>
+
 </resources>

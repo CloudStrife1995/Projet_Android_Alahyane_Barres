@@ -7,6 +7,8 @@ import android.support.v4.app.NotificationCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.format.DateUtils;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -17,8 +19,8 @@ import java.text.DateFormat;
 import java.util.Date;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    private static int SPLASH_TIME_OUT = 4000;
-    private DatePickerDialog dpd = null;
+    //private static int SPLASH_TIME_OUT = 4000;
+    //private DatePickerDialog dpd = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +41,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         };
         dpd= new DatePickerDialog(this,odsl,2018,10,5);*/
-        new Handler().postDelayed(new Runnable(){
+        /*new Handler().postDelayed(new Runnable(){
             @Override
             public void run(){
                 Intent homeIntent = new Intent(MainActivity.this, HomeActivity.class);
@@ -47,17 +49,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 finish();
             }
 
-        },SPLASH_TIME_OUT);
+        },SPLASH_TIME_OUT);*/
     }
 
-    public void clickButton11(View view) {
+    /*public void clickButton11(View view) {
 
         //Toast
         Toast.makeText(getApplicationContext(),getString(R.string.msg),Toast.LENGTH_LONG).show();
 
         // DatePickerDialog
         dpd.show();
-    }
+    }*/
 
 
 
@@ -78,6 +80,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
         //myTextView.setText("Bienvenue sur Youviewer");
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.Settings) {
+            Toast.makeText(getApplicationContext(), getString(R.string.Do_you_want_to_change_the_settings), Toast.LENGTH_SHORT).show();
+        } else if (id == R.id.Help) {
+            Toast.makeText(getApplicationContext(), getString(R.string.Do_you_need_help), Toast.LENGTH_SHORT).show();
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main_menu, menu);
+        return true;
     }
 }
 

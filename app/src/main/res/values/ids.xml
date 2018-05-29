@@ -3,4 +3,5 @@
     <item name="textView" type="id" />
     <item name="button" type="id" />
     <item name="button11" type="id" />
+    <item name="Settings" type="id" />
 </resources>
