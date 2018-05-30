@@ -78,7 +78,8 @@ public class SecondActivity extends AppCompatActivity {
         @Override
         public void onBindViewHolder(MovieHolder holder, int position) {
             try {
-                holder.name.setText(movies.getJSONObject(position).get("name").toString());
+                System.out.println("Entering onBindViewHolder !!!!!!!!");
+                holder.Title.setText(movies.getJSONObject(position).get("Title").toString());
             } catch (JSONException e) {
                 e.printStackTrace();
             }
@@ -91,11 +92,11 @@ public class SecondActivity extends AppCompatActivity {
         }
 
         public class MovieHolder extends RecyclerView.ViewHolder {
-            TextView name;
+            TextView Title;
 
             public MovieHolder(View itemView) {
                 super(itemView);
-                name = (TextView)itemView.findViewById(R.id.rv_movie_element_name);
+                Title = (TextView)itemView.findViewById(R.id.rv_movie_element_Title);
             }
         }
 

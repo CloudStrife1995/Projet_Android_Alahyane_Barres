@@ -7,4 +7,5 @@
     <item name="rv_movie" type="id" />
     <item name="rv_biers_element_name" type="id" />
     <item name="rv_biers" type="id" />
+    <item name="rv_movie_element_Title" type="id" />
 </resources>

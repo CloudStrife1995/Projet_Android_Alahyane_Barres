@@ -51,13 +51,13 @@ public class Moviedatabase extends IntentService {
         URL url = null;
 
         try {
-            url = new URL("http://binouze.fabrigli.fr/bieres.json");
+            url = new URL("http://www.omdbapi.com/?i=tt3896198&apikey=be8f850a");
             HttpURLConnection conn = (HttpURLConnection)url.openConnection();
             conn.setRequestMethod("GET");
             conn.connect();
 
             if(HttpURLConnection.HTTP_OK == conn.getResponseCode()){
-                copyInputStreamToFile(conn.getInputStream(), new File(getCacheDir(), "bieres.json"));
+                copyInputStreamToFile(conn.getInputStream(), new File(getCacheDir(), "movie.json"));
                 Log.d(TAG, "Film downloaded");
                 LocalBroadcastManager.getInstance(this).sendBroadcast(new Intent(MainActivity.MOVIE_UPDATE));
             } else {
