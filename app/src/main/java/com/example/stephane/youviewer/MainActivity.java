@@ -1,26 +1,19 @@
 package com.example.stephane.youviewer;
 
-import android.app.DatePickerDialog;
 import android.content.Intent;
-import android.os.Handler;
-import android.support.v4.app.NotificationCompat;
-import android.support.v7.app.AppCompatActivity;
+import android.net.Uri;
 import android.os.Bundle;
-import android.text.format.DateUtils;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
-import android.widget.DatePicker;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import java.text.DateFormat;
-import java.util.Date;
-
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity {
     //private static int SPLASH_TIME_OUT = 4000;
     //private DatePickerDialog dpd = null;
+
+    public static final String MOVIE_UPDATE = "com.example.stephane.youviewer";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,14 +66,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public void clickButton2(View view){
         // Intent
-        Intent i = new Intent(this,SecondActivity.class);
-        startActivity(i);
+        Intent intent = new Intent(this,SecondActivity.class);
+        startActivity(intent);
     }
 
     @Override
-    public void onClick(View view) {
-        //myTextView.setText("Bienvenue sur Youviewer");
-    }
+
 
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
@@ -96,6 +87,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main_menu, menu);
         return true;
+    }
+
+    public void GoogleMaps(View v) {
+        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("geo:0,0?q=Batman")));
     }
 }
 

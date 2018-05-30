@@ -4,4 +4,7 @@
     <item name="button" type="id" />
     <item name="button11" type="id" />
     <item name="Settings" type="id" />
+    <item name="rv_movie" type="id" />
+    <item name="rv_biers_element_name" type="id" />
+    <item name="rv_biers" type="id" />
 </resources>

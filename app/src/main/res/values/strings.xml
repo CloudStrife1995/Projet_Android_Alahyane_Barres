@@ -8,5 +8,7 @@
     <string name="Settings">Settings</string>
     <string name="liste_des_films">Movies list</string>
     <string name="welcome_to_youviewer">WELCOME TO YOUVIEWER</string>
+    <string name="dwl">Downloaded</string>
+    <string name="GoogleMaps">Google Maps</string>
 
 </resources>
